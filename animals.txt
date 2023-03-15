@@ -1,0 +1,9 @@
+nome: Tobi razza: Doberman
+nome: Eagle apertura ali:150
+nome: Ralph giocoso: No
+nome: Frank colore piume: Bianco
+nome: Pippo razza: Pastore Tedesco
+nome: Vito giocoso: Si
+nome: Franky razza: Maltese
+nome: Cipi colore piume: Verde
+nome: Storm apertura ali:240

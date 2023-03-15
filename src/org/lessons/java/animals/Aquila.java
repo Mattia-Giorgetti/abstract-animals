@@ -3,20 +3,19 @@ package org.lessons.java.animals;
 import java.math.BigDecimal;
 
 public class Aquila extends Animale implements Volante{
-    private BigDecimal aperturaAli;
-    public Aquila(String nome, BigDecimal aperturaAli) {
+    private int aperturaAli;
+    public Aquila(String nome, int aperturaAli) throws IllegalArgumentException {
         super(nome);
-        this.aperturaAli = aperturaAli;
+        if (aperturaAli > 0){
+            this.aperturaAli = aperturaAli;
+        } else {
+            throw new IllegalArgumentException("Apertura alare non valida");
+        }
     }
 
-    public BigDecimal getAperturaAli() {
+    public int getAperturaAli() {
         return aperturaAli;
     }
-
-    public void setAperturaAli(BigDecimal aperturaAli) {
-        this.aperturaAli = aperturaAli;
-    }
-
     @Override
     public void verso() {
         System.out.println("Stride");
@@ -30,5 +29,11 @@ public class Aquila extends Animale implements Volante{
     @Override
     public void vola() {
         System.out.println("Sto volando!!!");
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " apertura ali:" + aperturaAli;
+
     }
 }

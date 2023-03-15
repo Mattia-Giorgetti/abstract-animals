@@ -2,7 +2,7 @@ package org.lessons.java.animals;
 
 public class Delfino extends Animale implements Nuotante{
     private boolean giocoso;
-    public Delfino(String nome, boolean giocoso) {
+    public Delfino(String nome, boolean giocoso) throws IllegalArgumentException{
         super(nome);
         this.giocoso = giocoso;
     }
@@ -10,11 +10,6 @@ public class Delfino extends Animale implements Nuotante{
     public boolean isGiocoso() {
         return giocoso;
     }
-
-    public void setGiocoso(boolean giocoso) {
-        this.giocoso = giocoso;
-    }
-
     @Override
     public void verso() {
         System.out.println("Fischia");
@@ -28,5 +23,10 @@ public class Delfino extends Animale implements Nuotante{
     @Override
     public void nuota() {
         System.out.println("Sto nuotando!!!");
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " giocoso: " + (giocoso ? "Si" : "No");
     }
 }
