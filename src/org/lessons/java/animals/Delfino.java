@@ -1,13 +1,27 @@
 package org.lessons.java.animals;
 
 public class Delfino extends Animale implements Nuotante{
+    private boolean giocoso;
+    public Delfino(String nome, boolean giocoso) {
+        super(nome);
+        this.giocoso = giocoso;
+    }
+
+    public boolean isGiocoso() {
+        return giocoso;
+    }
+
+    public void setGiocoso(boolean giocoso) {
+        this.giocoso = giocoso;
+    }
+
     @Override
-    void verso() {
+    public void verso() {
         System.out.println("Fischia");
     }
 
     @Override
-    void mangia() {
+    public void mangia() {
         System.out.println("Mangia pesci");
     }
 

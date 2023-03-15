@@ -1,14 +1,28 @@
 package org.lessons.java.animals;
 
 public class Cane extends Animale{
-    private String nome;
+    private String razza;
+
+    public Cane(String nome, String razza) {
+        super(nome);
+        this.razza = razza;
+    }
+
+    public String getRazza() {
+        return razza;
+    }
+
+    public void setRazza(String razza) {
+        this.razza = razza;
+    }
+
     @Override
-    void verso() {
+    public void verso() {
         System.out.println("Abbaia");
     }
 
     @Override
-    void mangia() {
+    public void mangia() {
         System.out.println("Mangia crocchette");
     }
 }
